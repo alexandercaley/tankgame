@@ -3,7 +3,11 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 
 public class miniMap extends Canvas {
-  public static void main(String[] args) {
+
+    public miniMap(){
+    }
+
+    public void draw(){
         JFrame frame = new JFrame();
         Canvas canvas = new miniMap();
         canvas.setSize(1000, 1000);
