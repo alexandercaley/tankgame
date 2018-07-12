@@ -2,10 +2,10 @@ import java.awt.Canvas;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 
-public class gameFrame extends Canvas {
+public class miniMap extends Canvas {
   public static void main(String[] args) {
         JFrame frame = new JFrame();
-        Canvas canvas = new gameFrame();
+        Canvas canvas = new miniMap();
         canvas.setSize(1000, 1000);
         frame.add(canvas);
         frame.pack();
