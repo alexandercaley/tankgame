@@ -1,15 +1,14 @@
-import java.awt.Canvas;
-import java.awt.Graphics;
-import javax.swing.JFrame;
+import java.awt.*;
+import javax.swing.*;
 
 public class windowFrame extends Canvas {
 
     public windowFrame(){}
 
-    public void draw(){
+    public void makeFrame(){
         JFrame frame = new JFrame();
         Canvas canvas = new windowFrame();
-        canvas.setSize(1000, 1000);
+        canvas.setSize(1280, 900);
         frame.add(canvas);
         frame.pack();
         frame.setVisible(true);
