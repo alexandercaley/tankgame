@@ -1,3 +1,5 @@
+package tank_game;
+
 import java.awt.*;
 import javax.swing.*;
 
