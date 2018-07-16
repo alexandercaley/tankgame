@@ -1,3 +1,5 @@
+package tank_game;
+
 import java.util.*;
 
 public class runGame {
