@@ -5,14 +5,12 @@ import javax.swing.*;
 
 public class windowFrame extends Canvas {
 
-    public windowFrame(){}
-
-    public void makeFrame(){
+    public windowFrame(int width, int height){
         JFrame frame = new JFrame();
-        Canvas canvas = new windowFrame();
-        canvas.setSize(1280, 900);
-        frame.add(canvas);
+        this.setSize(width, height);
+        frame.add(this);
         frame.pack();
         frame.setVisible(true);
+        frame.setResizable(false);
     }
 }
