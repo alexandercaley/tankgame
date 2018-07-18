@@ -5,7 +5,7 @@ import java.util.*;
 
 public class tankGame extends Canvas implements Runnable{
 
-    public static String TITLE = "TANK GAME";
+    public static String TITLE = "Tank Wars";
     public static int WIDTH = 1280;
     public static int HEIGHT = 900;
 
