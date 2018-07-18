@@ -18,4 +18,16 @@ public class BackgroundImage extends JPanel{
     public void initialize(BufferedImage imagePath){
         background = imagePath;
     }
+
+    public void drawTiles(Graphics display){
+        int tileWidth = background.getWidth(this);
+        int tileHeight = background.getHeight(this);
+        int x = width / tileWidth;
+        int y = height / tileHeight;
+        for (int i = -1; i <= y; i++) {
+            for (int j = 0; j <= x; j++) {
+                display.drawImage(background, j * tileWidth, i * tileHeight, tileWidth, tileHeight, this);
+            }
+        }
+    }
 }
