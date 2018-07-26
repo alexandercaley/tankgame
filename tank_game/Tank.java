@@ -13,7 +13,7 @@ public class Tank extends ImageLoader{
     private int angle;
     private final int rotation = 6;
     protected boolean[] keys = new boolean[4];
-    private boolean powerup = false;
+    private boolean powerUp = false;
     private int health = 100;
     private int lives = 3;
 
@@ -75,7 +75,7 @@ public class Tank extends ImageLoader{
         bullets.add(new Bullet(game.loadImages().get("bullet"),
                 x + getImage().getWidth()/2,
                 y + getImage().getHeight()/2, angle));
-        if (powerup){
+        if (powerUp){
             bullets.add(new Bullet(game.loadImages().get("bullet"),
                     x + getImage().getWidth()/4,
                     y + getImage().getHeight()/4, angle));
@@ -96,7 +96,7 @@ public class Tank extends ImageLoader{
             if (game.objects.get(i).getType().equals("powerUp")){
                 Rectangle powers = game.objects.get(i).getBounds();
                 if (t.intersects(powers)){
-                    powerup = true;
+                    powerUp = true;
                     game.objects.remove(i);
                 }
             }

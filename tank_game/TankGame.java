@@ -34,6 +34,10 @@ public class TankGame extends JPanel implements Runnable{
         imageMap.put("large_explosion", loadImages("/resources/Explosion_large.gif"));
     }
 
+    public HashMap<String, BufferedImage> loadImages(){
+        return imageMap;
+    }
+
     public BufferedImage loadImages(String path){
         BufferedImage image = null;
         try{
@@ -54,7 +58,7 @@ public class TankGame extends JPanel implements Runnable{
         objects  = new ArrayList<ImageLoader>();
         temporaryWalls = new ArrayList<>();
         mapLayout = new Map("/resources/map.txt");
-        mapLayout.loadmap();
+        mapLayout.loadMap();
         mapSize = new Point(mapLayout.getWidth() * 32, mapLayout.getHeight() * 32);
         bg = new BackgroundImage(mapSize.x, mapSize.y);
         bg.initialize(imageMap.get("Background"));

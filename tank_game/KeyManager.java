@@ -45,7 +45,39 @@ public class KeyManager {
         if(event.getKeyCode() == KeyEvent.VK_DOWN) {
             tanks.get(1).keys[1] = true;
         }
+    }
 
+    public void released(KeyEvent event, ArrayList<Tank> tanks){
+        if(event.getKeyCode() == KeyEvent.VK_A) {
+            tanks.get(0).keys[0] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_W) {
+            tanks.get(0).keys[3] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_D) {
+            tanks.get(0).keys[2] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_S) {
+            tanks.get(0).keys[1] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_LEFT) {
+            tanks.get(1).keys[0] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_UP) {
+            tanks.get(1).keys[3] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_RIGHT) {
+            tanks.get(1).keys[2] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_DOWN) {
+            tanks.get(1).keys[1] = false;
+        }
+        if(event.getKeyCode() == KeyEvent.VK_SPACE) {
+            tanks.get(0).shoot();
+        }
+        if(event.getKeyCode() == KeyEvent.VK_PERIOD) {
+            tanks.get(1).shoot();
+        }
     }
 
     public void setup(ArrayList<Tank> tanks, ArrayList<ImageLoader> object, ArrayList<BreakableWalls> breakableWalls){
