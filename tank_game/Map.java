@@ -35,6 +35,34 @@ public class Map {
         String newLine;
         try{
             layer = new BufferedReader(new InputStreamReader(TankGame.class.getResource(file).openStream()));
+            newLine = layer.readLine();
+            width = newLine.length();
+            height = 0;
+            while(newLine != null){
+                for (int i = 0, n = newLine.length(); i < n; i++){
+                    char c = newLine.charAt(i);
+
+                    if (c == '1'){
+                        game.addObjects(game.loadImages().get("Wall1"), i * 32, height * 32, 0, 1, "wall");
+                    }
+                    if (c == '2'){
+                        game.addTempItems(game.loadImages().get("Wall2"), i * 32, height * 32);
+                    }
+                    if (c == '3'){
+                        game.addTank1(game.loadImages().get("Tank1"), i * 32, height * 32);
+                    }
+                    if (c == '4'){
+                        game.addTank2(game.loadImages().get("Tank2"), i * 32, height * 32);
+                    }
+
+                    if (c == '5'){
+                        game.addObjects(game.loadImages().get("power"), i * 32, height, 0, 1, "power");
+                    }
+                }
+                height++;
+                newLine = layer.readLine();
+            }
+            layer.close();
         } catch(Exception e){
             e.printStackTrace();
         }

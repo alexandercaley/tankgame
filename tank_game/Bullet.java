@@ -43,4 +43,12 @@ public class Bullet {
     public BufferedImage getImage(){
         return this.bullet;
     }
+
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
 }

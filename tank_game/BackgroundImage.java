@@ -19,7 +19,7 @@ public class BackgroundImage extends JPanel{
         background = imagePath;
     }
 
-    public void drawTiles(Graphics display){
+    public void render(Graphics display){
         int tileWidth = background.getWidth(this);
         int tileHeight = background.getHeight(this);
         int x = width / tileWidth;
