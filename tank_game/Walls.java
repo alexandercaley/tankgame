@@ -15,15 +15,12 @@ public class Walls {
         this.x = x;
         this.y = y;
         this.image = image;
-        visible = true;
+        this.visible = true;
+        this.tangible = true;
     }
 
     public void render(Graphics graphics, ImageObserver observer){
         graphics.drawImage(image, x, y, observer);
-    }
-
-    public boolean isTangible(){
-        return tangible;
     }
 
     public void setTangible(boolean tangible) {

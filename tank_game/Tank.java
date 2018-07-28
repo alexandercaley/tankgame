@@ -6,84 +6,102 @@ import java.util.ArrayList;
 
 public class Tank extends ImageLoader{
 
-    protected int vx;
-    protected int vy;
-    protected int initItem;
+    private boolean show;
     public ArrayList<Bullet> bullets;
     private int angle;
-    private final int rotation = 6;
-    protected boolean[] keys = new boolean[4];
-    private boolean powerUp = false;
-    private int health = 100;
-    private int lives = 3;
+    private final int rotation;
+    protected boolean[] keys;
+    private boolean powerUp;
+    private int health;
+    private int lives;
+    protected ArrayList<Explosions> explosions;
 
 
-    public Tank(BufferedImage image, int vx, int vy, int item, int totalItems){
-        super(image, vx, vy, item, totalItems, "tank");
-        bullets = new ArrayList<>();
-        angle = rotation * item;
-        this.vx = vx;
-        this.vy = vy;
-        this.initItem = item;
-        for (int i = 0; i < 2; i++){
-            keys[i] = false;
+    public Tank(BufferedImage image, int x, int y, int item, int totalItems){
+        super(image, x, y, item, totalItems, "tank");
+        this.bullets = new ArrayList<>();
+        this.explosions = new ArrayList<>();
+        this.item = item;
+        this.rotation = 6;
+        this.angle = this.rotation * this.item;
+        this.show = true;
+        this.powerUp = false;
+        this.lives = 3;
+        this.health = 100;
+        this.keys = new boolean[4];
+        for (int i = 0; i < 4; i++){
+            this.keys[i] = false;
         }
     }
 
     public void move(){
-        if (keys[0]) rotateLeft();
-        if (keys[1]) moveBackward();
-        if (keys[2]) rotateRight();
-        if (keys[3]) moveForward();
+        if (keys[0]) this.rotateLeft();
+        if (keys[1]) this.moveBackward();
+        if (keys[2]) this.rotateRight();
+        if (keys[3]) this.moveForward();
     }
 
     public void rotateLeft(){
-        item++;
-        if (item > 59) {
-            item = 0;
+        this.item++;
+        if (this.item > 59) {
+            this.item = 0;
         }
-        angle = rotation * item;
+        this.angle = this.rotation * this.item;
     }
 
     public void rotateRight(){
-        item--;
-        if (item < 0){
-            item = 59;
+        this.item--;
+        if (this.item < 0){
+            this.item = 59;
         }
-        angle = rotation * item;
+        this.angle = this.rotation * this.item;
     }
 
     public void moveForward(){
-        x += (speed * Math.cos(Math.toRadians(angle)));
-        y -= (speed * Math.sin(Math.toRadians(angle)));
+        x += (this.getSpeed() * Math.cos(Math.toRadians(this.angle)));
+        y -= (this.getSpeed() * Math.sin(Math.toRadians(this.angle)));
     }
 
     public void moveBackward(){
-        x -= (speed * Math.cos(Math.toRadians(angle)));
-        y += (speed * Math.sin(Math.toRadians(angle)));
+        x -= (this.getSpeed() * Math.cos(Math.toRadians(this.angle)));
+        y += (this.getSpeed() * Math.sin(Math.toRadians(this.angle)));
     }
 
     public Rectangle returnBounds(){
         return new Rectangle(x, y, 54, 54);
     }
 
-    public ArrayList getBullets(){
+    public ArrayList<Bullet> getBullets(){
         return bullets;
     }
 
     public void shoot(){
         bullets.add(new Bullet(game.loadImages().get("bullet"),
-                x + getImage().getWidth()/2,
-                y + getImage().getHeight()/2, angle));
+                x + this.getImage().getWidth()/2,
+                y + this.getImage().getHeight()/2, this.angle));
         if (powerUp){
             bullets.add(new Bullet(game.loadImages().get("bullet"),
-                    x + getImage().getWidth()/4,
-                    y + getImage().getHeight()/4, angle));
+                    x + this.getImage().getWidth()/4,
+                    y + this.getImage().getHeight()/4, this.angle));
         }
     }
 
-    //checks tank lives and respawns tank or ends game
+    //checks tank lives and respawn tank or ends game
     public void respawn(){
+        //NEEDS TO BE DONE!!!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
@@ -103,12 +121,15 @@ public class Tank extends ImageLoader{
         }
         //check bullets and tanks
         for (int i = 0; i < bullets.size(); i++){
-            boolean delete = false;
+            boolean remove = false;
             Rectangle bullet = new Rectangle(bullets.get(i).getX(),bullets.get(i).getY(),
                     bullets.get(i).getImage().getWidth(), bullets.get(i).getImage().getHeight());
             //for bullet intersect tank
             if (bullet.intersects(tRec)){
-                delete = true;
+                this.explosions.add(new Explosions(game.loadImages().get("explosion"),
+                        (int) bullet.getX() - 16,
+                        (int) bullet.getY() - 16, 0, 6));
+                remove = true;
                 t1.health = t1.health - 20;
                 if (t1.health <= 0){
                     t1.respawn();
@@ -117,14 +138,17 @@ public class Tank extends ImageLoader{
 
             //check bullets and breakable walls
             for (int j = 0; j < game.temporaryWalls.size(); j++){
-                Rectangle breakablewall = new Rectangle(game.temporaryWalls.get(j).getX(),
+                Rectangle breakableWall = new Rectangle(game.temporaryWalls.get(j).getX(),
                         game.temporaryWalls.get(j).getY(),
                         game.temporaryWalls.get(j).getImage().getWidth(),
                         game.temporaryWalls.get(j).getImage().getHeight());
-                if (bullet.intersects(breakablewall) && game.temporaryWalls.get(j).isVisible()){
+                if (bullet.intersects(breakableWall) && game.temporaryWalls.get(j).isVisible()){
+                    this.explosions.add(new Explosions(game.loadImages().get("explosion"),
+                            game.temporaryWalls.get(j).getX(),
+                            game.temporaryWalls.get(j).getY(),
+                            0, 6));
                     game.temporaryWalls.get(j).setVisible(false);
-                    game.temporaryWalls.get(j).setTangible(false);
-                    delete = true;
+                    remove = true;
                 }
             }
 
@@ -134,13 +158,47 @@ public class Tank extends ImageLoader{
                     Rectangle wall = new Rectangle(game.objects.get(j).getX(), game.objects.get(j).getY(),
                             game.objects.get(j).getImage().getWidth(), game.objects.get(j).getImage().getHeight());
                     if (bullet.intersects(wall)){
-                        delete = true;
+                        remove = true;
+                        this.explosions.add(new Explosions(
+                                game.loadImages().get("explosion"),
+                                (int) wall.getX(),
+                                (int) wall.getY(),
+                                0, 6)
+                        );
                     }
                 }
             }
-            if (delete == true){
+            if (remove == true){
                 bullets.remove(i);
             }
         }
+    }
+
+    public boolean[] getKeys(){
+        return this.keys;
+    }
+
+    public boolean isShown(){
+        return this.show;
+    }
+
+    public int getLives(){
+        return this.lives;
+    }
+
+    public int getHealth(){
+        return this.health;
+    }
+
+    public void setLives(int lives){
+        this.lives = lives;
+    }
+
+    public void setHealth(int health){
+        this.health = health;
+    }
+
+    public void setPowerUp(boolean powerUp){
+        this.powerUp = powerUp;
     }
 }

@@ -20,16 +20,12 @@ public class Bullet {
     }
 
     public void draw(Graphics graphic, ImageObserver observer){
-        graphic.drawImage(bullet, x, y, observer);
+        graphic.drawImage(this.bullet, this.x, this.y, observer);
     }
 
     public void update(){
-        x += Math.cos(Math.toRadians(angle)) * 6;
-        y -= Math.sin(Math.toRadians(angle)) * 6;
-    }
-
-    public void collision(){
-        Rectangle rect = new Rectangle(x, y, bullet.getWidth(), bullet.getHeight());
+        x += Math.cos(Math.toRadians(angle)) * 12;
+        y -= Math.sin(Math.toRadians(angle)) * 12;
     }
 
     public int getX(){
@@ -46,9 +42,5 @@ public class Bullet {
 
     public boolean isVisible() {
         return visible;
-    }
-
-    public void setVisible(boolean visible) {
-        this.visible = visible;
     }
 }

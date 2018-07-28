@@ -10,23 +10,25 @@ public class BackgroundImage extends JPanel{
     private int height;
     private BufferedImage background;
 
-    public BackgroundImage(int width, int height){
+    public BackgroundImage(int width, int height, BufferedImage background){
         this.width = width;
         this.height = height;
-    }
-
-    public void initialize(BufferedImage imagePath){
-        background = imagePath;
+        this.background = background;
     }
 
     public void render(Graphics display){
-        int tileWidth = background.getWidth(this);
-        int tileHeight = background.getHeight(this);
-        int x = width / tileWidth;
-        int y = height / tileHeight;
+        int x = this.width / this.background.getWidth(this);
+        int y = this.height / this.background.getHeight(this);
         for (int i = -1; i <= y; i++) {
             for (int j = 0; j <= x; j++) {
-                display.drawImage(background, j * tileWidth, i * tileHeight, tileWidth, tileHeight, this);
+                display.drawImage(
+                        this.background,
+                        j * this.background.getWidth(this),
+                        i * this.background.getHeight(this),
+                        this.background.getWidth(this),
+                        this.background.getHeight(this),
+                        this
+                );
             }
         }
     }

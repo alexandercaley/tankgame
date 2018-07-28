@@ -6,11 +6,19 @@ import java.util.ArrayList;
 
 public class KeyController extends KeyAdapter {
 
-    public void keyPressed(ArrayList<Tank> tanks, KeyManager keyManager, KeyEvent key){
-        keyManager.pressed(key, tanks);
+    private KeyManager manager;
+    private ArrayList<Tank> tanks;
+
+    KeyController(KeyManager manager, ArrayList<Tank> tanks){
+        this.manager = manager;
+        this.tanks = tanks;
     }
 
-    public void keyReleased(ArrayList<Tank> tanks, KeyManager keyManager, KeyEvent key){
-        keyManager.released(key, tanks);
+    public void keyPressed(KeyEvent event){
+        this.manager.pressed(event, this.tanks);
+    }
+
+    public void keyReleased(KeyEvent event){
+        this.manager.released(event, this.tanks);
     }
 }

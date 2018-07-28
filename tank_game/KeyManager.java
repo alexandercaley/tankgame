@@ -123,11 +123,11 @@ public class KeyManager {
 
         tanks.get(0).collisions(tanks.get(1));
         if(game.isRunning()){
-            game.endRunning();
+            game.stopRunning();
         }
         tanks.get(1).collisions(tanks.get(0));
         if(game.isRunning()){
-            game.endRunning();
+            game.stopRunning();
         }
     }
 }

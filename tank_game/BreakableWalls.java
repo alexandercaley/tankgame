@@ -11,17 +11,16 @@ public class BreakableWalls extends Walls{
 
     public BreakableWalls(BufferedImage image, int x, int y){
         super(image, x, y);
-        setTangible(true);
+        setTangible(false);
         setVisible(true);
     }
 
     public void render(Graphics graphics, ImageObserver observer){
-        if (isVisible() == false){
+        if (this.isVisible() == false){
             this.respawn--;
             if(this.respawn <= 0){
                 this.respawn = 1000;
                 setVisible(true);
-                setTangible(true);
             }
         }
         else{

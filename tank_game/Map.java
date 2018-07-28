@@ -1,6 +1,7 @@
 package tank_game;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Map {
@@ -10,22 +11,21 @@ public class Map {
     private String file;
     BufferedReader layer;
 
-    public Map(String filepath){
-        String newLine;
+    public Map(String file){
         try{
-            file = filepath;
-            layer = new BufferedReader(new InputStreamReader(getClass().getResource(file).openStream()));
-            newLine = layer.readLine();
-            width = newLine.length();
-            //Each layer will take one unit
-            height = 0;
-            //get all layers
-            while(newLine != null){
-                height++;
-                newLine = layer.readLine();
+            this.file = file;
+            this.layer = new BufferedReader(
+                    new InputStreamReader(
+                            getClass().getResource(this.file).openStream()
+                    )
+            );
+            this.width = this.layer.readLine().length();
+            this.height = 0;
+            while(this.layer.readLine() != null){
+                this.height++;
             }
-            layer.close();
-        } catch (Exception e){
+            this.layer.close();
+        }   catch(IOException e){
             e.printStackTrace();
         }
     }
@@ -43,27 +43,27 @@ public class Map {
                     char c = newLine.charAt(i);
 
                     if (c == '1'){
-                        game.addObjects(game.loadImages().get("Wall1"), i * 32, height * 32, 0, 1, "wall");
+                        game.addObjects(game.loadImages().get("Wall1"), i * 32, this.height * 32, 0, 1, "wall");
                     }
                     if (c == '2'){
-                        game.addTempItems(game.loadImages().get("Wall2"), i * 32, height * 32);
+                        game.addBreakableWalls(game.loadImages().get("Wall2"), i * 32, this.height * 32);
                     }
                     if (c == '3'){
-                        game.addTank1(game.loadImages().get("Tank1"), i * 32, height * 32);
+                        game.addTank1(game.loadImages().get("Tank1"), i * 32, this.height * 32);
                     }
                     if (c == '4'){
-                        game.addTank2(game.loadImages().get("Tank2"), i * 32, height * 32);
+                        game.addTank2(game.loadImages().get("Tank2"), i * 32, this.height * 32);
                     }
 
                     if (c == '5'){
-                        game.addObjects(game.loadImages().get("power"), i * 32, height, 0, 1, "power");
+                        game.addObjects(game.loadImages().get("power"), i * 32, this.height, 0, 1, "power");
                     }
                 }
-                height++;
+                this.height++;
                 newLine = layer.readLine();
             }
-            layer.close();
-        } catch(Exception e){
+            this.layer.close();
+        } catch(IOException e){
             e.printStackTrace();
         }
     }

@@ -7,31 +7,32 @@ import java.awt.image.ImageObserver;
 public class ImageLoader {
     protected TankGame game;
     private BufferedImage image;
-    private BufferedImage[] images = new BufferedImage[100];
-    protected int speed = 6;
+    private BufferedImage[] images;
+    protected int speed;
     private String type;
-    boolean visible = true;
     protected int x;
     protected int y;
-    protected int item = 0;
+    protected int item;
     protected int totalItems;
 
     public ImageLoader(BufferedImage image, int x, int y, int item, int totalItems, String type){
-        this.totalItems = totalItems;
-        this.item = item;
-        this.type = type;
-        init(image, x, y);
-    }
-
-    private void init(BufferedImage image, int x, int y){
         game = TankGame.getGame();
+        this.image = image;
         this.x = x;
         this.y = y;
-        this.image = image;
-        int width = image.getWidth()/totalItems;
-        int height = image.getHeight();
-        for (int i = 0; i < totalItems; i++){
-            images[i] = image.getSubimage(i * width, 0, width, height);
+        this.item = item;
+        this.totalItems = totalItems;
+        this.type = type;
+        this.speed = 6;
+        this.images = new BufferedImage[100];
+        //Ask professor about exception here
+        for (int i = 0; i < this.totalItems; i++){
+            try{
+                this.images[i] = this.image.getSubimage(i * (this.image.getWidth() / this.totalItems),
+                        0, (this.image.getWidth() / this.totalItems), this.image.getHeight());
+            }   catch(NullPointerException e){
+                e.printStackTrace();
+            }
         }
     }
 
@@ -41,7 +42,7 @@ public class ImageLoader {
 
 
     public BufferedImage getImage() {
-        return image;
+        return this.images[this.item];
     }
 
     public int getX(){
@@ -61,10 +62,14 @@ public class ImageLoader {
     }
 
     public Rectangle getBounds(){
-        return new Rectangle(x, y, image.getWidth(), image.getHeight());
+        return new Rectangle(this.x, this.y, this.image.getWidth(), this.image.getHeight());
     }
 
     public String getType(){
         return type;
+    }
+
+    public int getSpeed(){
+        return this.speed;
     }
 }
