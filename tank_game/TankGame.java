@@ -18,8 +18,8 @@ public class TankGame extends JPanel implements Runnable{
     private final int width = 800;
     private final int height = 600;
     private BufferedImage bg;
-    private BufferedImage leftView;
-    private BufferedImage rightView;
+//    private BufferedImage leftView;
+//    private BufferedImage rightView;
     private BufferedImage miniMap;
     public static HashMap<String, BufferedImage> imageMap;
     protected ArrayList<Tank> tanks;
@@ -33,6 +33,8 @@ public class TankGame extends JPanel implements Runnable{
     protected KeyController key;
     private boolean running = false;
     private Dimension window;
+//    private int tank1Lives, tank2Lives;
+//    private int tank1Health, tank2Health;
 
     private TankGame(){
         setFocusable(true);
@@ -52,6 +54,11 @@ public class TankGame extends JPanel implements Runnable{
         this.loadImages();
         Map map = new Map("map.txt");
         map.loadMap();
+        mapSize = new Point(map.getWidth() * 32, map.getHeight() * 32);
+        background = new BackgroundImage(mapSize.x, mapSize.y, imageMap.get("Background"));
+        keyManager = new KeyManager();
+        key = new KeyController(keyManager, this.tanks);
+        this.addKeyListener(key);
     }
 
     private void setMap(){
@@ -62,8 +69,7 @@ public class TankGame extends JPanel implements Runnable{
         imageMap.put("Tank2", loadImages("tank_game/resources/Tank2.gif"));
         imageMap.put("powerUp", loadImages("tank_game/resources/Pickup.gif"));
         imageMap.put("bullet", loadImages("tank_game/resources/Rocket.gif"));
-        imageMap.put("small_explosion", loadImages("tank_game/resources/Explosion_small.gif"));
-        imageMap.put("large_explosion", loadImages("tank_game/resources/Explosion_large.gif"));
+        imageMap.put("explosion", loadImages("tank_game/resources/explosion.png"));
     }
 
     public HashMap<String, BufferedImage> loadImages(){
@@ -99,23 +105,53 @@ public class TankGame extends JPanel implements Runnable{
     }
 
     public void paint(Graphics graphic){
-        //NEEDS TO BE DONE!!!!!!!
+        this.bg = (BufferedImage) createImage(mapSize.x, mapSize.y);
+        this.miniMap = this.bg;
+        this.render();
 
+        int p1x = this.tanks.get(0).getX() - this.window.width / 4 > 0 ? tanks.get(0).getX() - this.window.width / 4 : 0;
+        int p1y = this.tanks.get(0).getY() - this.window.height / 2 > 0 ? tanks.get(0).getY() - this.window.height / 2 : 0;
+        int p2x = this.tanks.get(1).getX() - this.window.width / 4 > 0 ? tanks.get(1).getX() - this.window.width / 4 : 0;
+        int p2y = this.tanks.get(1).getY() - this.window.height / 2 > 0 ? tanks.get(1).getY() - this.window.height / 2 : 0;
 
+        if (p1x > mapSize.x - this.window.width / 2){
+            p1x = mapSize.x - this.window.width / 2;
+        }
+        if (p1y > mapSize.y - this.window.height){
+            p1y = mapSize.y - this.window.height;
+        }
+        if (p2x > mapSize.x - this.window.width / 2){
+            p2x = mapSize.x - this.window.width;
+        }
+        if (p2y > mapSize.y - this.window.height){
+            p2y = mapSize.y - this.window.height;
+        }
 
+        BufferedImage leftView = this.bg.getSubimage(p1x, p1y, this.window.width / 2, this.window.height);
+        BufferedImage rightView = this.bg.getSubimage(p2x, p2y, this.window.width / 2, this.window.height);
 
+        graphic.drawImage(leftView, 0, 0, this);
+        graphic.drawImage(rightView, this.window.width / 2, 0, this);
+        graphic.drawRect(this.window.width / 2 - 1, 0, 1, this.window.height);
+        graphic.drawImage(this.miniMap, this.window.width / 2 - 104, 378, 200, 200, this);
 
+        if (this.tanks.get(0).getLives() <= 0){
+            graphic.setColor(Color.blue);
+            game.stopRunning();
+            graphic.drawString("TANK 2 WINS!", p1x + 30, p1y - 70);
+        }
+        else if (this.tanks.get(1).getLives() <= 0){
+            graphic.setColor(Color.red);
+            game.stopRunning();
+            graphic.drawString("TANK 1 WINS!", p2x + 200, p2y - 90);
+        }
 
-
-
-
-
-
-
-
-
-
-
+        graphic.setColor(Color.WHITE);
+        graphic.drawString("HEALTH: " + this.tanks.get(0).getHealth(), 32, getHeight() - 60);
+        graphic.drawString("HEALTH: " + this.tanks.get(1).getHealth(), getWidth() - 150, getHeight() - 60);
+        graphic.drawString("LIVES: " + this.tanks.get(0).getLives(), 32, getHeight() - 120);
+        graphic.drawString("LIVES: " + this.tanks.get(1).getLives(), getWidth() - 150, getHeight() - 120);
+        graphic.dispose();
     }
 
     public void render(){
