@@ -80,12 +80,12 @@ public class KeyManager {
         }
     }
 
-    public void setup(ArrayList<Tank> tanks, ArrayList<ImageLoader> object, ArrayList<BreakableWalls> breakableWalls){
+    public void setup(ArrayList<Tank> tanks, ArrayList<Sprites> object, ArrayList<BreakableWalls> breakableWalls){
         move(tanks);
         tankCollision(tanks, object, breakableWalls);
     }
 
-    public void tankCollision(ArrayList<Tank> tanks, ArrayList<ImageLoader> object, ArrayList<BreakableWalls> breakableWalls){
+    public void tankCollision(ArrayList<Tank> tanks, ArrayList<Sprites> object, ArrayList<BreakableWalls> breakableWalls){
         Rectangle tank1 = new Rectangle(tanks.get(0).getX(), tanks.get(0).getY(), 55, 55);
         Rectangle tank2 = new Rectangle(tanks.get(1).getX(), tanks.get(1).getY(), 55, 55);
         if (tank1.intersects(tank2)){

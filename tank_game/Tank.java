@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-public class Tank extends ImageLoader{
+public class Tank extends Sprites {
 
     private boolean show;
     public ArrayList<Bullet> bullets;

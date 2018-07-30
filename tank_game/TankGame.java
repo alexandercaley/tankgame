@@ -25,7 +25,7 @@ public class TankGame extends JPanel implements Runnable{
     protected ArrayList<Tank> tanks;
     //for breakable walls
     protected ArrayList<BreakableWalls> temporaryWalls;
-    protected ArrayList<ImageLoader> objects;
+    protected ArrayList<Sprites> objects;
     private static TankGame game = new TankGame();
     private Point mapSize;
     private KeyManager keyManager;
@@ -77,7 +77,7 @@ public class TankGame extends JPanel implements Runnable{
         imageMap.put("Wall2", loadImages("tank_game/resources/Wall2.gif"));
         imageMap.put("Tank1", loadImages("tank_game/resources/TankImage.png"));
         imageMap.put("Tank2", loadImages("tank_game/resources/TankImage.png"));
-        imageMap.put("powerUp", loadImages("tank_game/resources/Pickup.gif"));
+        imageMap.put("powerUp", loadImages("tank_game/resources/Pickup.png"));
         imageMap.put("bullet", loadImages("tank_game/resources/bullet.png"));
         imageMap.put("explosion", loadImages("tank_game/resources/explosion.png"));
     }
@@ -102,8 +102,8 @@ public class TankGame extends JPanel implements Runnable{
         this.temporaryWalls.add(new BreakableWalls(image, x, y));
     }
 
-    public void addObjects(BufferedImage image, int x, int y, int object, int total, String type){
-        this.objects.add(new ImageLoader(image, x, y, object, total, type));
+    public void addSprites(BufferedImage image, int x, int y, int object, int total, String type){
+        this.objects.add(new Sprites(image, x, y, object, total, type));
     }
 
     public void addTank1(BufferedImage image, int x, int y){
@@ -132,7 +132,7 @@ public class TankGame extends JPanel implements Runnable{
             p1y = mapSize.y - this.window.height;
         }
         if (p2x > mapSize.x - this.window.width / 2){
-            p2x = mapSize.x - this.window.width;
+            p2x = mapSize.x - this.window.width / 2;
         }
         if (p2y > mapSize.y - this.window.height){
             p2y = mapSize.y - this.window.height;
@@ -146,12 +146,12 @@ public class TankGame extends JPanel implements Runnable{
         graphic.drawRect(this.window.width / 2 - 1, 0, 1, this.window.height);
         graphic.drawImage(this.miniMap, this.window.width / 2 - 104, 378, 200, 200, this);
 
-        if (this.tanks.get(0).getLives() <= 0 && this.tanks.get(0).getHealth() <= 0){
+        if (this.tanks.get(0).getLives() < 0){
             graphic.setColor(Color.blue);
             game.stopRunning();
             graphic.drawString("TANK 2 WINS!", p1x + 30, p1y - 70);
         }
-        else if (this.tanks.get(1).getLives() <= 0 && this.tanks.get(1).getHealth() <= 0){
+        else if (this.tanks.get(1).getLives() < 0){
             graphic.setColor(Color.blue);
             game.stopRunning();
             graphic.drawString("TANK 1 WINS!", p1x + 30, p1y - 70);
@@ -170,7 +170,7 @@ public class TankGame extends JPanel implements Runnable{
         keyManager.setup(tanks, objects, temporaryWalls);
 
         //walls
-        for (ImageLoader object : this.objects){
+        for (Sprites object : this.objects){
             object.render(this.graphic2d, this);
         }
         for (BreakableWalls temporaryWall : this.temporaryWalls){

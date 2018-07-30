@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
-public class ImageLoader {
+public class Sprites {
     protected TankGame game;
     private BufferedImage image;
     private BufferedImage[] images;
@@ -15,7 +15,7 @@ public class ImageLoader {
     protected int item;
     protected int totalItems;
 
-    public ImageLoader(BufferedImage image, int x, int y, int item, int totalItems, String type){
+    public Sprites(BufferedImage image, int x, int y, int item, int totalItems, String type){
         game = TankGame.getGame();
         this.image = image;
         this.x = x;

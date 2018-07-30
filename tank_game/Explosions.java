@@ -2,7 +2,7 @@ package tank_game;
 
 import java.awt.image.BufferedImage;
 
-public class Explosions extends ImageLoader{
+public class Explosions extends Sprites {
     private int end;
     private int current;
 
