@@ -75,4 +75,5 @@ public class Map {
     public int getHeight() {
         return height;
     }
+
 }
