@@ -117,6 +117,7 @@ public class TankGame extends JPanel implements Runnable{
 
     public void paint(Graphics graphic){
         this.bg = (BufferedImage) createImage(mapSize.x, mapSize.y);
+        this.graphic2d = this.bg.createGraphics();
         this.miniMap = this.bg;
         this.render();
 
