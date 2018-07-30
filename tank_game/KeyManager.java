@@ -75,7 +75,7 @@ public class KeyManager {
         if(event.getKeyCode() == KeyEvent.VK_SPACE) {
             tanks.get(0).shoot();
         }
-        if(event.getKeyCode() == KeyEvent.VK_PERIOD) {
+        if(event.getKeyCode() == KeyEvent.VK_ENTER) {
             tanks.get(1).shoot();
         }
     }
@@ -90,7 +90,7 @@ public class KeyManager {
         Rectangle tank2 = new Rectangle(tanks.get(1).getX(), tanks.get(1).getY(), 55, 55);
         if (tank1.intersects(tank2)){
             tanks.get(0).setX(p1[0]);
-            tanks.get(0).setX(p1[1]);
+            tanks.get(0).setY(p1[1]);
             tanks.get(1).setX(p2[0]);
             tanks.get(1).setY(p2[1]);
         }
