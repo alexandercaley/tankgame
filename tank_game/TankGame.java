@@ -27,11 +27,10 @@ public class TankGame extends JPanel implements Runnable{
     protected ArrayList<BreakableWalls> temporaryWalls;
     protected ArrayList<ImageLoader> objects;
     private static TankGame game = new TankGame();
-    private static Map mapLayout;
     private Point mapSize;
     private KeyManager keyManager;
     protected KeyController key;
-    private boolean running = false;
+    private boolean running;
     private Dimension window;
 //    private int tank1Lives, tank2Lives;
 //    private int tank1Health, tank2Health;
@@ -147,15 +146,15 @@ public class TankGame extends JPanel implements Runnable{
         graphic.drawRect(this.window.width / 2 - 1, 0, 1, this.window.height);
         graphic.drawImage(this.miniMap, this.window.width / 2 - 104, 378, 200, 200, this);
 
-        if (this.tanks.get(0).getLives() <= 0){
+        if (this.tanks.get(0).getLives() <= 0 && this.tanks.get(0).getHealth() <= 0){
             graphic.setColor(Color.blue);
             game.stopRunning();
             graphic.drawString("TANK 2 WINS!", p1x + 30, p1y - 70);
         }
-        else if (this.tanks.get(1).getLives() <= 0){
-            graphic.setColor(Color.red);
+        else if (this.tanks.get(1).getLives() <= 0 && this.tanks.get(1).getHealth() <= 0){
+            graphic.setColor(Color.blue);
             game.stopRunning();
-            graphic.drawString("TANK 1 WINS!", p2x + 200, p2y - 90);
+            graphic.drawString("TANK 1 WINS!", p1x + 30, p1y - 70);
         }
 
         graphic.setColor(Color.WHITE);
@@ -235,7 +234,6 @@ public class TankGame extends JPanel implements Runnable{
     public void stopRunning(){
         this.setRunning(false);
         removeKeyListener(key);
-        game.init();
     }
 
     public Graphics2D getGraphics2D(){

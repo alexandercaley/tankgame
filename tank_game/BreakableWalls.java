@@ -7,7 +7,7 @@ import java.awt.image.ImageObserver;
 public class BreakableWalls extends Walls{
 
     //time for walls to respawn
-    private int respawn = 1000;
+    private int respawn = 500;
 
     public BreakableWalls(BufferedImage image, int x, int y){
         super(image, x, y);
@@ -19,7 +19,7 @@ public class BreakableWalls extends Walls{
         if (this.isVisible() == false){
             this.respawn--;
             if(this.respawn <= 0){
-                this.respawn = 1000;
+                this.respawn = 500;
                 setVisible(true);
             }
         }

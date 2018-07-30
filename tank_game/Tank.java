@@ -88,28 +88,20 @@ public class Tank extends ImageLoader{
 
     //checks tank lives and respawn tank or ends game
     public void respawn(){
-        //NEEDS TO BE DONE!!!!!!!!!!
+        if (this.lives > 0){
+            this.health = 100;
+            this.lives--;
+        }
+        else{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
     }
 
     public void collisions(Tank t1){
         Rectangle t = returnBounds();
         Rectangle tRec = t1.returnBounds();
 
-        //check powerups and tank
+        //check powerUps and tank
         for (int i = 0; i < game.objects.size(); i++){
             if (game.objects.get(i).getType().equals("powerUp")){
                 Rectangle powers = game.objects.get(i).getBounds();
