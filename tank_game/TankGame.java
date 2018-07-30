@@ -146,17 +146,20 @@ public class TankGame extends JPanel implements Runnable{
         graphic.drawRect(this.window.width / 2 - 1, 0, 1, this.window.height);
         graphic.drawImage(this.miniMap, this.window.width / 2 - 104, 378, 200, 200, this);
 
-        if (this.tanks.get(0).getLives() < 0){
-            graphic.setColor(Color.blue);
+        if (this.tanks.get(0).getLives() <= 0){
             game.stopRunning();
-            graphic.drawString("TANK 2 WINS!", p1x + 30, p1y - 70);
+            graphic.setFont(new Font("Arial", Font.PLAIN, 50));
+            graphic.setColor(Color.blue);
+            graphic.drawString("TANK 2 WINS!", getWidth() / 4, getHeight() / 3);
         }
-        else if (this.tanks.get(1).getLives() < 0){
-            graphic.setColor(Color.blue);
+        else if (this.tanks.get(1).getLives() <= 0){
             game.stopRunning();
-            graphic.drawString("TANK 1 WINS!", p1x + 30, p1y - 70);
+            graphic.setFont(new Font("Arial", Font.PLAIN, 50));
+            graphic.setColor(Color.red);
+            graphic.drawString("TANK 1 WINS!", getWidth() / 4, getHeight() / 3);
         }
 
+        graphic.setFont(new Font("Arial", Font.PLAIN, 20));
         graphic.setColor(Color.WHITE);
         graphic.drawString("HEALTH: " + this.tanks.get(0).getHealth(), 32, getHeight() - 60);
         graphic.drawString("HEALTH: " + this.tanks.get(1).getHealth(), getWidth() - 150, getHeight() - 60);

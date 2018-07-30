@@ -88,12 +88,9 @@ public class Tank extends Sprites {
 
     //checks tank lives and respawn tank or ends game
     public void respawn(){
-        if (this.lives > 0){
-            this.health = 100;
-            this.lives--;
-        }
-        else{
-
+        this.lives--;
+        if (this.lives > 1){
+            this.health = this.health + 100;
         }
     }
 
@@ -180,17 +177,5 @@ public class Tank extends Sprites {
 
     public int getHealth(){
         return this.health;
-    }
-
-    public void setLives(int lives){
-        this.lives = lives;
-    }
-
-    public void setHealth(int health){
-        this.health = health;
-    }
-
-    public void setPowerUp(boolean powerUp){
-        this.powerUp = powerUp;
     }
 }
