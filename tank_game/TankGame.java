@@ -76,10 +76,10 @@ public class TankGame extends JPanel implements Runnable{
         imageMap.put("Background", loadImages("tank_game/resources/Background.bmp"));
         imageMap.put("Wall1", loadImages("tank_game/resources/Wall1.gif"));
         imageMap.put("Wall2", loadImages("tank_game/resources/Wall2.gif"));
-        imageMap.put("Tank1", loadImages("tank_game/resources/Tank1.gif"));
-        imageMap.put("Tank2", loadImages("tank_game/resources/Tank2.gif"));
+        imageMap.put("Tank1", loadImages("tank_game/resources/TankImage.png"));
+        imageMap.put("Tank2", loadImages("tank_game/resources/TankImage.png"));
         imageMap.put("powerUp", loadImages("tank_game/resources/Pickup.gif"));
-        imageMap.put("bullet", loadImages("tank_game/resources/Rocket.gif"));
+        imageMap.put("bullet", loadImages("tank_game/resources/bullet.png"));
         imageMap.put("explosion", loadImages("tank_game/resources/explosion.png"));
     }
 
