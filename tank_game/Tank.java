@@ -91,6 +91,15 @@ public class Tank extends Sprites {
         this.lives--;
         if (this.lives > 0){
             this.health = this.health + 100;
+            //game.tanks.remove(0);
+            if (this == game.tanks.get(0)){
+                game.tanks.get(0).setX(1024);
+                game.tanks.get(0).setY(80);
+            }
+            if (this == game.tanks.get(1)){
+                game.tanks.get(1).setX(1024);
+                game.tanks.get(1).setY(800);
+            }
         }
     }
 

@@ -108,6 +108,7 @@ public class TankGame extends JPanel implements Runnable{
 
     public void addTank1(BufferedImage image, int x, int y){
         this.tanks.add(new Tank(image, x, y, 0, 60));
+
     }
 
     public void addTank2(BufferedImage image, int x, int y){
