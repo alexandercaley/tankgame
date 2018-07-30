@@ -15,8 +15,8 @@ public class TankGame extends JPanel implements Runnable{
     private BackgroundImage background;
     private Thread thread;
     private Graphics2D graphic2d;
-    private final int width = 800;
-    private final int height = 600;
+    private final int width = 1000;
+    private final int height = 800;
     private BufferedImage bg;
 //    private BufferedImage leftView;
 //    private BufferedImage rightView;
@@ -144,19 +144,19 @@ public class TankGame extends JPanel implements Runnable{
         graphic.drawImage(leftView, 0, 0, this);
         graphic.drawImage(rightView, this.window.width / 2, 0, this);
         graphic.drawRect(this.window.width / 2 - 1, 0, 1, this.window.height);
-        graphic.drawImage(this.miniMap, this.window.width / 2 - 104, 378, 200, 200, this);
+        graphic.drawImage(this.miniMap, this.window.width / 2 - 150, 480, 300, 300, this);
 
         if (this.tanks.get(0).getLives() <= 0){
             game.stopRunning();
             graphic.setFont(new Font("Arial", Font.PLAIN, 50));
             graphic.setColor(Color.blue);
-            graphic.drawString("TANK 2 WINS!", getWidth() / 4, getHeight() / 3);
+            graphic.drawString("TANK 2 WINS!", getWidth() / 3, getHeight() / 3);
         }
         else if (this.tanks.get(1).getLives() <= 0){
             game.stopRunning();
             graphic.setFont(new Font("Arial", Font.PLAIN, 50));
             graphic.setColor(Color.red);
-            graphic.drawString("TANK 1 WINS!", getWidth() / 4, getHeight() / 3);
+            graphic.drawString("TANK 1 WINS!", getWidth() / 3, getHeight() / 3);
         }
 
         graphic.setFont(new Font("Arial", Font.PLAIN, 20));
