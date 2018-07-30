@@ -61,7 +61,18 @@ public class TankGame extends JPanel implements Runnable{
         this.addKeyListener(key);
     }
 
-    private void setMap(){
+//    private void setMap(){
+//        imageMap.put("Background", loadImages("tank_game/resources/Background.bmp"));
+//        imageMap.put("Wall1", loadImages("tank_game/resources/Wall1.gif"));
+//        imageMap.put("Wall2", loadImages("tank_game/resources/Wall2.gif"));
+//        imageMap.put("Tank1", loadImages("tank_game/resources/Tank1.gif"));
+//        imageMap.put("Tank2", loadImages("tank_game/resources/Tank2.gif"));
+//        imageMap.put("powerUp", loadImages("tank_game/resources/Pickup.gif"));
+//        imageMap.put("bullet", loadImages("tank_game/resources/Rocket.gif"));
+//        imageMap.put("explosion", loadImages("tank_game/resources/explosion.png"));
+//    }
+
+    public void loadImages(){
         imageMap.put("Background", loadImages("tank_game/resources/Background.bmp"));
         imageMap.put("Wall1", loadImages("tank_game/resources/Wall1.gif"));
         imageMap.put("Wall2", loadImages("tank_game/resources/Wall2.gif"));
@@ -72,7 +83,7 @@ public class TankGame extends JPanel implements Runnable{
         imageMap.put("explosion", loadImages("tank_game/resources/explosion.png"));
     }
 
-    public HashMap<String, BufferedImage> loadImages(){
+    public HashMap<String, BufferedImage> returnImages(){
         return imageMap;
     }
 
@@ -89,19 +100,19 @@ public class TankGame extends JPanel implements Runnable{
     }
 
     public void addBreakableWalls(BufferedImage image, int x, int y){
-        temporaryWalls.add(new BreakableWalls(image, x, y));
+        this.temporaryWalls.add(new BreakableWalls(image, x, y));
     }
 
     public void addObjects(BufferedImage image, int x, int y, int object, int total, String type){
-        objects.add(new ImageLoader(image, x, y, object, total, type));
+        this.objects.add(new ImageLoader(image, x, y, object, total, type));
     }
 
     public void addTank1(BufferedImage image, int x, int y){
-        tanks.add(new Tank(image, x, y, 0, 60));
+        this.tanks.add(new Tank(image, x, y, 0, 60));
     }
 
     public void addTank2(BufferedImage image, int x, int y){
-        tanks.add(new Tank(image, x, y, 30, 60));
+        this.tanks.add(new Tank(image, x, y, 30, 60));
     }
 
     public void paint(Graphics graphic){

@@ -76,11 +76,11 @@ public class Tank extends ImageLoader{
     }
 
     public void shoot(){
-        bullets.add(new Bullet(game.loadImages().get("bullet"),
+        bullets.add(new Bullet(game.returnImages().get("bullet"),
                 x + this.getImage().getWidth()/2,
                 y + this.getImage().getHeight()/2, this.angle));
         if (powerUp){
-            bullets.add(new Bullet(game.loadImages().get("bullet"),
+            bullets.add(new Bullet(game.returnImages().get("bullet"),
                     x + this.getImage().getWidth()/4,
                     y + this.getImage().getHeight()/4, this.angle));
         }
@@ -126,7 +126,7 @@ public class Tank extends ImageLoader{
                     bullets.get(i).getImage().getWidth(), bullets.get(i).getImage().getHeight());
             //for bullet intersect tank
             if (bullet.intersects(tRec)){
-                this.explosions.add(new Explosions(game.loadImages().get("explosion"),
+                this.explosions.add(new Explosions(game.returnImages().get("explosion"),
                         (int) bullet.getX() - 16,
                         (int) bullet.getY() - 16, 0, 6));
                 remove = true;
@@ -143,7 +143,7 @@ public class Tank extends ImageLoader{
                         game.temporaryWalls.get(j).getImage().getWidth(),
                         game.temporaryWalls.get(j).getImage().getHeight());
                 if (bullet.intersects(breakableWall) && game.temporaryWalls.get(j).isVisible()){
-                    this.explosions.add(new Explosions(game.loadImages().get("explosion"),
+                    this.explosions.add(new Explosions(game.returnImages().get("explosion"),
                             game.temporaryWalls.get(j).getX(),
                             game.temporaryWalls.get(j).getY(),
                             0, 6));
@@ -160,7 +160,7 @@ public class Tank extends ImageLoader{
                     if (bullet.intersects(wall)){
                         remove = true;
                         this.explosions.add(new Explosions(
-                                game.loadImages().get("explosion"),
+                                game.returnImages().get("explosion"),
                                 (int) wall.getX(),
                                 (int) wall.getY(),
                                 0, 6)

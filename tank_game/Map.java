@@ -43,20 +43,20 @@ public class Map {
                     char c = newLine.charAt(i);
 
                     if (c == '1'){
-                        game.addObjects(game.loadImages().get("Wall1"), i * 32, this.height * 32, 0, 1, "wall");
+                        game.addObjects(game.returnImages().get("Wall1"), i * 32, this.height * 32, 0, 1, "wall");
                     }
                     if (c == '2'){
-                        game.addBreakableWalls(game.loadImages().get("Wall2"), i * 32, this.height * 32);
+                        game.addBreakableWalls(game.returnImages().get("Wall2"), i * 32, this.height * 32);
                     }
                     if (c == '3'){
-                        game.addTank1(game.loadImages().get("Tank1"), i * 32, this.height * 32);
+                        game.addTank1(game.returnImages().get("Tank1"), i * 32, this.height * 32);
                     }
                     if (c == '4'){
-                        game.addTank2(game.loadImages().get("Tank2"), i * 32, this.height * 32);
+                        game.addTank2(game.returnImages().get("Tank2"), i * 32, this.height * 32);
                     }
 
                     if (c == '5'){
-                        game.addObjects(game.loadImages().get("power"), i * 32, this.height, 0, 1, "power");
+                        //game.addObjects(game.returnImages().get("power"), i * 32, this.height, 0, 1, "power");
                     }
                 }
                 this.height++;
