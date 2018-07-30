@@ -89,7 +89,7 @@ public class Tank extends Sprites {
     //checks tank lives and respawn tank or ends game
     public void respawn(){
         this.lives--;
-        if (this.lives > 1){
+        if (this.lives > 0){
             this.health = this.health + 100;
         }
     }
@@ -119,9 +119,11 @@ public class Tank extends Sprites {
                         (int) bullet.getX() - 16,
                         (int) bullet.getY() - 16, 0, 6));
                 remove = true;
-                t1.health = t1.health - 20;
-                if (t1.health <= 0){
-                    t1.respawn();
+                if (t1.lives > 0){
+                    t1.health = t1.health - 20;
+                    if (t1.health <= 0){
+                        t1.respawn();
+                    }
                 }
             }
 
