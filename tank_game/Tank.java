@@ -14,6 +14,7 @@ public class Tank extends Sprites {
     private boolean powerUp;
     private int health;
     private int lives;
+    private int speed;
     protected ArrayList<Explosions> explosions;
 
 
@@ -22,6 +23,7 @@ public class Tank extends Sprites {
         this.bullets = new ArrayList<>();
         this.explosions = new ArrayList<>();
         this.item = item;
+        this.speed = 6;
         this.rotation = 6;
         this.angle = this.rotation * this.item;
         this.show = true;
@@ -174,10 +176,6 @@ public class Tank extends Sprites {
         }
     }
 
-    public boolean[] getKeys(){
-        return this.keys;
-    }
-
     public boolean isShown(){
         return this.show;
     }
@@ -188,5 +186,9 @@ public class Tank extends Sprites {
 
     public int getHealth(){
         return this.health;
+    }
+
+    public int getSpeed(){
+        return this.speed;
     }
 }

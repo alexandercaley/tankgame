@@ -166,6 +166,7 @@ public class TankGame extends JPanel implements Runnable{
         graphic.drawString("HEALTH: " + this.tanks.get(1).getHealth(), getWidth() - 150, getHeight() - 60);
         graphic.drawString("LIVES: " + this.tanks.get(0).getLives(), 32, getHeight() - 120);
         graphic.drawString("LIVES: " + this.tanks.get(1).getLives(), getWidth() - 150, getHeight() - 120);
+        System.out.println(tanks.size() + temporaryWalls.size() + objects.size() + tanks.get(0).bullets.size() + tanks.get(1).bullets.size());
         graphic.dispose();
     }
 

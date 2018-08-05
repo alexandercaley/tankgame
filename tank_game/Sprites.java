@@ -8,7 +8,6 @@ public class Sprites {
     protected TankGame game;
     private BufferedImage image;
     private BufferedImage[] images;
-    protected int speed;
     private String type;
     protected int x;
     protected int y;
@@ -23,16 +22,10 @@ public class Sprites {
         this.item = item;
         this.totalItems = totalItems;
         this.type = type;
-        this.speed = 6;
         this.images = new BufferedImage[100];
-        //Ask professor about exception here
         for (int i = 0; i < this.totalItems; i++){
-            try{
-                this.images[i] = this.image.getSubimage(i * (this.image.getWidth() / this.totalItems),
-                        0, (this.image.getWidth() / this.totalItems), this.image.getHeight());
-            }   catch(NullPointerException e){
-                e.printStackTrace();
-            }
+            this.images[i] = this.image.getSubimage(i * (this.image.getWidth() / this.totalItems),
+                    0, (this.image.getWidth() / this.totalItems), this.image.getHeight());
         }
     }
 
@@ -67,9 +60,5 @@ public class Sprites {
 
     public String getType(){
         return type;
-    }
-
-    public int getSpeed(){
-        return this.speed;
     }
 }
