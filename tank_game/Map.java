@@ -9,7 +9,7 @@ public class Map {
     private int width;
     private int height;
     private String file;
-    BufferedReader layer;
+    public BufferedReader layer;
 
     public Map(String file){
         try{

@@ -96,15 +96,17 @@ public class KeyManager {
         }
 
         for (int i = 0; i < object.size(); i++){
-            Rectangle obj = new Rectangle(object.get(i).getX(), object.get(i).getY(),
-                    object.get(i).getImage().getWidth()/2, object.get(i).getImage().getHeight()/2);
-            if(tank1.intersects(obj)){
-                tanks.get(0).setX(p1[0]);
-                tanks.get(0).setY(p1[1]);
-            }
-            if(tank2.intersects(obj)){
-                tanks.get(1).setX(p2[0]);
-                tanks.get(1).setY(p2[1]);
+            if (!(object.get(i).getType() == "powerUp")){
+                Rectangle obj = new Rectangle(object.get(i).getX(), object.get(i).getY(),
+                        object.get(i).getImage().getWidth()/2, object.get(i).getImage().getHeight()/2);
+                if(tank1.intersects(obj)){
+                    tanks.get(0).setX(p1[0]);
+                    tanks.get(0).setY(p1[1]);
+                }
+                if(tank2.intersects(obj)){
+                    tanks.get(1).setX(p2[0]);
+                    tanks.get(1).setY(p2[1]);
+                }
             }
         }
 
