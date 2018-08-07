@@ -89,7 +89,7 @@ public class TankGame extends JPanel implements Runnable{
     public BufferedImage loadImages(String path){
         BufferedImage image = null;
         try{
-            image = ImageIO.read(new File(path));
+            image = ImageIO.read(getClass().getClassLoader().getResource(path));
         } catch (IOException e){
             e.printStackTrace();
             System.out.println("Invalid File!");
@@ -166,7 +166,7 @@ public class TankGame extends JPanel implements Runnable{
         graphic.drawString("HEALTH: " + this.tanks.get(1).getHealth(), getWidth() - 150, getHeight() - 60);
         graphic.drawString("LIVES: " + this.tanks.get(0).getLives(), 32, getHeight() - 120);
         graphic.drawString("LIVES: " + this.tanks.get(1).getLives(), getWidth() - 150, getHeight() - 120);
-        System.out.println(tanks.size() + temporaryWalls.size() + objects.size() + tanks.get(0).bullets.size() + tanks.get(1).bullets.size());
+        System.out.println(tanks.size() + temporaryWalls.size() + objects.size() + tanks.get(0).bullets.size() + tanks.get(1).bullets.size() + tanks.get(0).explosions.size() + tanks.get(1).explosions.size());
         graphic.dispose();
     }
 

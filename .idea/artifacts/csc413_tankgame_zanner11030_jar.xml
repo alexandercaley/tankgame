@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="csc413-tankgame-zanner11030:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/csc413_tankgame_zanner11030_jar</output-path>
+    <root id="archive" name="csc413-tankgame-zanner11030.jar">
+      <element id="module-output" name="csc413-tankgame-zanner11030" />
+    </root>
+  </artifact>
+</component>
