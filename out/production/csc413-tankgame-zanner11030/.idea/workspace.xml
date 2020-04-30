@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="csc413-tankgame-zanner11030:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7fbf56b-272d-4a0e-8a86-6d1ae2b8a852" name="Default" comment="almost there">
+      <change beforePath="$PROJECT_DIR$/tank_game/BackgroundImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/BackgroundImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/BreakableWalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/BreakableWalls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/Explosions.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/Explosions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/KeyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/KeyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/Sprites.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/Sprites.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/TankGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/TankGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/Walls.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/Walls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/resources/Pickup.png" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/resources/Pickup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/resources/TankImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/resources/TankImage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/resources/bullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/resources/bullet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank_game/resources/explosion.png" beforeDir="false" afterPath="$PROJECT_DIR$/tank_game/resources/explosion.png" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BackgroundImage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/BackgroundImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TankGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/TankGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1704">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8940#8941#0" expanded="true" />
+                <element signature="e#8967#8968#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BreakableWalls.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/BreakableWalls.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tank2.gif" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/resources/Tank2.gif">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="TankImage.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/resources/TankImage.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="Bullet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/Bullet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/KeyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tank.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tank_game/Tank.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="62" column="70" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/Map.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tank_game/map.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="62" selection-start-column="62" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>loadima</find>
+      <find>loa</find>
+      <find>system</find>
+      <find>respaw</find>
+      <find>shoot</find>
+      <find>5</find>
+      <find>returnimages</find>
+      <find>event</find>
+      <find>remove</find>
+      <find>getheal</find>
+      <find>live</find>
+      <find>repaint</find>
+      <find>setfont</find>
+      <find>Tank(</find>
+      <find>addt</find>
+      <find>addtank</find>
+      <find>addtank1</find>
+      <find>powerup</find>
+      <find>temporarywalls.</find>
+      <find>run</find>
+      <find>imagemap</find>
+      <find>mapsize</find>
+      <find>graphic2d</find>
+      <find>addspri</find>
+      <find>objects.</find>
+      <find>render</find>
+      <find>addsprite</find>
+      <find>image</find>
+      <find>object</find>
+      <find>bullet</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tank_game/runGame.java" />
+        <option value="$PROJECT_DIR$/tank_game/windowFrame.java" />
+        <option value="$PROJECT_DIR$/tank_game/tankGame.java" />
+        <option value="$PROJECT_DIR$/tank_game/UnbreakableWalls.java" />
+        <option value="$PROJECT_DIR$/tank_game/Bullet.java" />
+        <option value="$PROJECT_DIR$/tank_game/KeyController.java" />
+        <option value="$PROJECT_DIR$/tank_game/Walls.java" />
+        <option value="$PROJECT_DIR$/tank_game/Explosions.java" />
+        <option value="$PROJECT_DIR$/tank_game/BackgroundImage.java" />
+        <option value="$PROJECT_DIR$/tank_game/BreakableWalls.java" />
+        <option value="$PROJECT_DIR$/tank_game/ImageLoader.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/tank_game/Sprites.java" />
+        <option value="$PROJECT_DIR$/tank_game/Tank.java" />
+        <option value="$PROJECT_DIR$/tank_game/Map.java" />
+        <option value="$PROJECT_DIR$/tank_game/KeyManager.java" />
+        <option value="$PROJECT_DIR$/tank_game/map.txt" />
+        <option value="$PROJECT_DIR$/tank_game/TankGame.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1400" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="csc413-tankgame-zanner11030" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc413-tankgame-zanner11030" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc413-tankgame-zanner11030" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc413-tankgame-zanner11030" type="462c0819:PsiDirectoryNode" />
+              <item name="tank_game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc413-tankgame-zanner11030" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc413-tankgame-zanner11030" type="462c0819:PsiDirectoryNode" />
+              <item name="tank_game" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tank_game/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tank_game" />
+      <recent name="$PROJECT_DIR$/tank_game/resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TankGame">
+    <configuration name="TankGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tank_game.TankGame" />
+      <module name="csc413-tankgame-zanner11030" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tank_game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="runGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tank_game.runGame" />
+      <module name="csc413-tankgame-zanner11030" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tank_game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Application.runGame" />
+      <item itemvalue="Application.TankGame" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TankGame" />
+        <item itemvalue="Application.runGame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7fbf56b-272d-4a0e-8a86-6d1ae2b8a852" name="Default" comment="" />
+      <created>1531706772040</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531706772040</updated>
+    </task>
+    <task id="LOCAL-00001" summary="testing">
+      <created>1531707110603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531707110603</updated>
+    </task>
+    <task id="LOCAL-00002" summary="testing">
+      <created>1531708227681</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1531708227681</updated>
+    </task>
+    <task id="LOCAL-00003" summary="testing">
+      <created>1531708494455</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1531708494455</updated>
+    </task>
+    <task id="LOCAL-00004" summary="testing">
+      <created>1531889640134</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1531889640135</updated>
+    </task>
+    <task id="LOCAL-00005" summary="testing">
+      <created>1531932849392</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1531932849393</updated>
+    </task>
+    <task id="LOCAL-00006" summary="testing">
+      <created>1531934885656</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1531934885656</updated>
+    </task>
+    <task id="LOCAL-00007" summary="testing">
+      <created>1532628212934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532628212935</updated>
+    </task>
+    <task id="LOCAL-00008" summary="testing">
+      <created>1532630533201</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1532630533201</updated>
+    </task>
+    <task id="LOCAL-00009" summary="testing">
+      <created>1532715397127</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1532715397127</updated>
+    </task>
+    <task id="LOCAL-00010" summary="getting there">
+      <created>1532761165520</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1532761165520</updated>
+    </task>
+    <task id="LOCAL-00011" summary="getting there">
+      <created>1532761352297</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532761352297</updated>
+    </task>
+    <task id="LOCAL-00012" summary="getting there">
+      <created>1532799063806</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532799063806</updated>
+    </task>
+    <task id="LOCAL-00013" summary="getting there">
+      <created>1532800713604</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1532800713604</updated>
+    </task>
+    <task id="LOCAL-00014" summary="getting there">
+      <created>1532920488331</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1532920488331</updated>
+    </task>
+    <task id="LOCAL-00015" summary="getting there">
+      <created>1532922144653</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1532922144653</updated>
+    </task>
+    <task id="LOCAL-00016" summary="getting there">
+      <created>1532922625396</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1532922625396</updated>
+    </task>
+    <task id="LOCAL-00017" summary="getting there">
+      <created>1532924875316</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1532924875316</updated>
+    </task>
+    <task id="LOCAL-00018" summary="getting there">
+      <created>1532927390846</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1532927390846</updated>
+    </task>
+    <task id="LOCAL-00019" summary="getting there">
+      <created>1532928202544</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1532928202544</updated>
+    </task>
+    <task id="LOCAL-00020" summary="getting there">
+      <created>1532934096451</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1532934096451</updated>
+    </task>
+    <task id="LOCAL-00021" summary="getting there">
+      <created>1532968171593</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1532968171593</updated>
+    </task>
+    <task id="LOCAL-00022" summary="getting there">
+      <created>1532968508152</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1532968508152</updated>
+    </task>
+    <task id="LOCAL-00023" summary="getting there">
+      <created>1532969070512</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1532969070512</updated>
+    </task>
+    <task id="LOCAL-00024" summary="getting there">
+      <created>1532972336090</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1532972336090</updated>
+    </task>
+    <task id="LOCAL-00025" summary="getting there">
+      <created>1532972442418</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1532972442418</updated>
+    </task>
+    <task id="LOCAL-00026" summary="getting there">
+      <created>1533427260455</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1533427260455</updated>
+    </task>
+    <task id="LOCAL-00027" summary="almost there">
+      <created>1533437316092</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1533437316092</updated>
+    </task>
+    <task id="LOCAL-00028" summary="almost there">
+      <created>1533600837587</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1533600837588</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1400" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.4995015" weight="0.32843652" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5011905" side_tool="true" weight="0.32843652" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49880952" weight="0.44805875" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32948583" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32910246" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24285714" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979014" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948583" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="testing" />
+    <MESSAGE value="getting there" />
+    <MESSAGE value="almost there" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost there" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="21" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Tank1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Tank2.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaLookAndFeel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/TankGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8940#8941#0" expanded="true" />
+            <element signature="e#8967#8968#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Background.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaLookAndFeel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/BackgroundImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/TankGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8940#8941#0" expanded="true" />
+            <element signature="e#8967#8968#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/BackgroundImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaLookAndFeel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/TankGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8940#8941#0" expanded="true" />
+            <element signature="e#8967#8968#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaLookAndFeel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/BackgroundImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaLookAndFeel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Rocket.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Shell.gif" />
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Pickup.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Explosion_large.gif" />
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Background.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/UnbreakableWalls.java" />
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Explosion_small.gif" />
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Shield1.gif" />
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Shield2.gif" />
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Wall2.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/javax/swing/RepaintManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1578" selection-start-line="1578" selection-end-line="1578" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="5209" selection-start-line="5209" selection-end-line="5209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="103" selection-start-line="9" selection-start-column="103" selection-end-line="9" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/explosion.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/Sprites.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Wall1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaPanelUI.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="377" selection-start-line="377" selection-end-line="377" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaMenuBarUI.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar!/com/apple/laf/AquaRootPaneUI.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Title.bmp" />
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Tank1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/bullet.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19365">
+          <caret line="1387" selection-start-line="1387" selection-end-line="1387" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/Walls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/Explosions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/KeyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="116" column="41" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/Tank2.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/resources/TankImage.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/map.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="62" selection-start-column="62" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/KeyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/BackgroundImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/BreakableWalls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/TankGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1704">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8940#8941#0" expanded="true" />
+            <element signature="e#8967#8968#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tank_game/Tank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="62" column="70" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>csc413-tankgame-zanner11030:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>csc413-tankgame-zanner11030</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
